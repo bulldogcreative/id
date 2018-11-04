@@ -19,3 +19,21 @@ only using the current timestamp. We will end up with more buckets this way.
 
 The second half of the ID uses the `random_bytes` function. It is then safely
 encoded using base 64. We strip away any characters that are unsafe for URLs.
+
+### Usage
+
+The example below generates 5,000 Object IDs.
+
+```php
+<?php
+
+require 'vendor/autoload.php';
+
+use Bulldog\id\ObjectId;
+
+$id = new ObjectId;
+
+for($i=0; $i<5000; $i++) {
+    var_dump($id->get(12));
+}
+```
