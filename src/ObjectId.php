@@ -7,7 +7,7 @@ namespace Bulldog\id
         public function get($length)
         {
             $parts = [];
-        
+
             // By using floor and ceil, if we divide an odd number by 2
             // we only get whole numbers that add up to the length.
             $parts[0] = $this->bucket(floor($length / 2));
