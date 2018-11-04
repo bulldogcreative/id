@@ -1,5 +1,8 @@
 # id
 
+[![Build Status](https://travis-ci.org/bulldogcreative/id.svg?branch=master)](https://travis-ci.org/bulldogcreative/id)
+![PHP 7.2+](https://img.shields.io/badge/requires-php%207.2%2B-blue.svg)
+
 A library for generating IDs.
 
 ## Object ID
