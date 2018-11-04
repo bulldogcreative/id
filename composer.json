@@ -1,6 +1,6 @@
 {
     "name": "bulldog/id",
-    "description": "Random Unique ID",
+    "description": "ID Generator",
     "type": "library",
     "license": "MIT",
     "autoload": {
