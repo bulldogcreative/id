@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/bulldogcreative/id.svg?branch=master)](https://travis-ci.org/bulldogcreative/id)
 ![PHP 7.2+](https://img.shields.io/badge/requires-php%207.2%2B-blue.svg)
+[![PHP version](https://badge.fury.io/ph/bulldog%2Fid.svg)](https://badge.fury.io/ph/bulldog%2Fid)
 
 A library for generating IDs.
 
