@@ -1,5 +1,5 @@
 {
-    "name": "bulldog/objectid",
+    "name": "bulldog/id",
     "description": "Random Unique ID",
     "type": "library",
     "license": "MIT",
