@@ -4,9 +4,9 @@
     "type": "library",
     "license": "MIT",
     "autoload": {
-        "files": [
-            "./src/id.php"
-        ]
+        "psr-4": {
+            "Bulldog\\id\\": "src/"
+        }
     },
     "authors": [
         {
