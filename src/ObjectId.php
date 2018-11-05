@@ -2,7 +2,7 @@
 
 namespace Bulldog\id
 {
-    class ObjectId
+    class ObjectId implements \Bulldog\id\Contracts\ObjectIdInterface
     {
         public function get($length)
         {

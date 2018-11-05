@@ -2,8 +2,7 @@
 
 namespace Bulldog\id\Contracts
 {
-    interface ObjectIdInterface
+    interface ObjectIdInterface extends \Bulldog\id\Contracts\IdInterface
     {
-        public function get($length);
     }
 }
