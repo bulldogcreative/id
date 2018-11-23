@@ -10,6 +10,7 @@ namespace Bulldog\id
         {
             $this->prefix = $prefix;
         }
+
         public function get($length)
         {
             $parts = [];
@@ -22,6 +23,11 @@ namespace Bulldog\id
             $id = $parts[0].$parts[1];
 
             return $this->prefix . $id;
+        }
+
+        public function setPrefix(string $prefix)
+        {
+            $this->prefix = $prefix;
         }
 
         protected function bucket($length)
