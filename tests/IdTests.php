@@ -37,4 +37,22 @@ class IdTests extends TestCase
             $this->assertFalse($result);
         }
     }
+
+    public function testUsingConstructPrefix()
+    {
+        $ids = [];
+        $prefix = 'pre_';
+        $id = new \Bulldog\id\ObjectId($prefix);
+        $len = 20;
+
+        for($i=0; $i<1000; $i++) {
+            $ids[] = $id->get($len);
+            $this->assertEquals(strlen($ids[$i]), $len + strlen($prefix));
+        }
+
+        for($i=0; $i<1000; $i++) {
+            $result = in_array($id->get($len), $ids);
+            $this->assertFalse($result);
+        }
+    }
 }

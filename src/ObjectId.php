@@ -4,6 +4,12 @@ namespace Bulldog\id
 {
     class ObjectId implements \Bulldog\id\Contracts\ObjectIdInterface
     {
+        protected $prefix;
+
+        public function __construct(string $prefix = '')
+        {
+            $this->prefix = $prefix;
+        }
         public function get($length)
         {
             $parts = [];
@@ -15,7 +21,7 @@ namespace Bulldog\id
 
             $id = $parts[0].$parts[1];
 
-            return $id;
+            return $this->prefix . $id;
         }
 
         protected function bucket($length)
