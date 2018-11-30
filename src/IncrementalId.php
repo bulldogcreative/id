@@ -14,13 +14,18 @@ class IncrementalId extends BaseId implements ObjectIdInterface
         $this->prefix = $prefix;
     }
 
-    public function get(...$ids)
+    public function create(...$ids)
     {
-        $id = '';
+        $this->id = '';
         foreach($ids as $i) {
-            $id .= $this->encode($i);
+            $this->id .= $this->encode($i);
         }
-        return $id;
+        return $this->id;
+    }
+
+    public function get($length)
+    {
+        return $this->prefix . substr($this->id, 0, $length);
     }
 
     public function setPrefix(string $prefix)
