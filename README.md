@@ -37,3 +37,29 @@ for($i=0; $i<5000; $i++) {
     var_dump($id->get(12));
 }
 ```
+
+## Incremental ID
+
+You can use multiple IDs to create a base64 encoded incremental ID. You may want
+to use the user's ID and another primary key from a relational database to create
+a unique incremental ID.
+
+### Usage
+
+The example below will generate the same string each time.
+
+```php
+<?php
+
+require 'vendor/autoload.php';
+
+use Bulldog\id\IncrementalId;
+
+$id = new IncrementalId;
+
+var_dump($id->create(4, 'dog', 9));
+// Output: NAZG9nOQ
+
+var_dump($id->get(4));
+// Output: NAZG
+```
