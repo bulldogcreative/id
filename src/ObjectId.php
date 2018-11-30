@@ -4,7 +4,7 @@ namespace Bulldog\id;
 
 use Bulldog\id\Contracts\ObjectIdInterface;
 
-class ObjectId implements ObjectIdInterface
+class ObjectId extends BaseId implements ObjectIdInterface
 {
     protected $prefix;
 
