@@ -7,6 +7,7 @@ use Bulldog\id\Contracts\ObjectIdInterface;
 class IncrementalId extends BaseId implements ObjectIdInterface
 {
     protected $prefix;
+    protected $id;
 
     public function __construct(string $prefix = '')
     {
