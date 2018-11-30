@@ -75,4 +75,13 @@ class IdTests extends TestCase
             $this->assertFalse($result);
         }
     }
+
+    public function testIncrementalId()
+    {
+        $iId = new \Bulldog\id\IncrementalId;
+
+        $id = $iId->create(4, 'dog', 9);
+        $this->assertEquals('NAZG9nOQ', $id);
+        $this->assertEquals('NAZG', $iId->get(4));
+    }
 }
