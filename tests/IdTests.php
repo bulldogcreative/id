@@ -84,4 +84,10 @@ class IdTests extends TestCase
         $this->assertEquals('NAZG9nOQ', $id);
         $this->assertEquals('NAZG', $iId->get(4));
     }
+
+    public function testSimpleId()
+    {
+        $id = \Bulldog\id\SimpleId::get();
+        $this->assertEquals(26, strlen($id));
+    }
 }
