@@ -16,14 +16,14 @@ class Identifier
         return $this->prefix . $this->bucket(floor($length / 2)) . $this->random(ceil($length / 2));
     }
 
-    public static function simple($hashlen = 8)
+    public function simple($hashlen = 8)
     {
-        return uniqid().substr(hash('md5', uniqid()), 0, $hashlen);
+        return $this->prefix . uniqid().substr(hash('md5', uniqid()), 0, $hashlen);
     }
 
     public function random($length = 8)
     {
-        return substr($this->encode(random_bytes($length)), 0, $length);
+        return $this->prefix . substr($this->encode(random_bytes($length)), 0, $length);
     }
 
     public function bucket($length = 8)
